@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Hadir_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Hadir Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Hadir_Test_Suite" class="navigator-link ">
+                    <span>D:\Bootcamp SQA 30\hadir-testing\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Hadir_Test_Suite" class="navigator-link ">
+                    <span class="test-stats">4 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Hadir_Test_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Hadir_Test_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Hadir_Test_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Hadir_Test_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Hadir_Test_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">19 methods, 1 failed,   18 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Hadir_Test_Suite" class="hide-methods failed suite-Hadir_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Hadir_Test_Suite -->
+                      <a href="#" panel-name="suite-Hadir_Test_Suite" class="show-methods failed suite-Hadir_Test_Suite"> (show)</a> <!-- show-methods failed suite-Hadir_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Hadir_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DivisiTest" class="method navigator-link" hash-for-method="hapusDivisi">hapusDivisi</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Hadir_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Hadir_Test_Suite" class="hide-methods passed suite-Hadir_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Hadir_Test_Suite -->
+                      <a href="#" panel-name="suite-Hadir_Test_Suite" class="show-methods passed suite-Hadir_Test_Suite"> (show)</a> <!-- show-methods passed suite-Hadir_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Hadir_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="dialogFilterBukaTutup">dialogFilterBukaTutup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DivisiTest" class="method navigator-link" hash-for-method="editDivisi">editDivisi</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="enamKartuTampil">enamKartuTampil</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="filterTanggal">filterTanggal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="filterUnit">filterUnit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DivisiTest" class="method navigator-link" hash-for-method="halamanDivisiTerbuka">halamanDivisiTerbuka</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.SmokeTest" class="method navigator-link" hash-for-method="halamanLoginAdminTerbuka">halamanLoginAdminTerbuka</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.LoginTest" class="method navigator-link" hash-for-method="loginEmailSalah">loginEmailSalah</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.LoginTest" class="method navigator-link" hash-for-method="loginKosong">loginKosong</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.LoginTest" class="method navigator-link" hash-for-method="loginPasswordSalah">loginPasswordSalah</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.LoginTest" class="method navigator-link" hash-for-method="loginValid">loginValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.LoginTest" class="method navigator-link" hash-for-method="logoutBerhasil">logoutBerhasil</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="nilaiKartuBerupaAngka">nilaiKartuBerupaAngka</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="pendingTerbukaSetelahLogin">pendingTerbukaSetelahLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="resetPending">resetPending</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="resetSetelahUbahTanggal">resetSetelahUbahTanggal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DashboardTest" class="method navigator-link" hash-for-method="searchPending">searchPending</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir_Test_Suite" title="hadir.tests.DivisiTest" class="method navigator-link" hash-for-method="tambahDivisi">tambahDivisi</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Hadir_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Hadir_Test_Suite" class="panel Hadir_Test_Suite">
+          <div class="suite-Hadir_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">hadir.tests.DivisiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="hapusDivisi">
+                  </a> <!-- hapusDivisi -->
+                  <span class="method-name">hapusDivisi</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input aria-invalid=&quot;false&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;Nama Divisi&quot; required=&quot;&quot; type=&quot;text&quot; class=&quot;MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng&quot; value=&quot;&quot;&gt; is not clickable at point (768, 465). Other element would receive the click: &lt;div class=&quot;MuiDialogActions-root MuiDialogActions-spacing css-1vskg8q&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=128.0.6613.86)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7edc64394a46608de7a728c449b509c2, clickElement {id=f.1F451B0C160C680A9517EE1589A9076A.d.B96EC9706D3ABBA53FC13286B3554E0A.e.61}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.86, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53125/devtoo..., se:cdpVersion: 128.0.6613.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7edc64394a46608de7a728c449b509c2)] -&gt; xpath: //div[@role=&apos;dialog&apos;]//input]
+Session ID: 7edc64394a46608de7a728c449b509c2
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at hadir.Pages.DivisiPage.tambahDivisi(DivisiPage.java:69)
+	at hadir.tests.DivisiTest.hapusDivisi(DivisiTest.java:107)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-DIV-04: Hapus divisi)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir_Test_Suite-class-failed -->
+          <div class="suite-Hadir_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hadir.tests.DashboardTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="dialogFilterBukaTutup">
+                  </a> <!-- dialogFilterBukaTutup -->
+                  <span class="method-name">dialogFilterBukaTutup</span>
+                  <em>
+(TC-DASH-08: Buka dialog filter lalu Batal)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enamKartuTampil">
+                  </a> <!-- enamKartuTampil -->
+                  <span class="method-name">enamKartuTampil</span>
+                  <em>
+(TC-DASH-02: Enam kartu di menu Dashboard tampil)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="filterTanggal">
+                  </a> <!-- filterTanggal -->
+                  <span class="method-name">filterTanggal</span>
+                  <em>
+(TC-DASH-06: Isi Start/End Date lalu Search)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="filterUnit">
+                  </a> <!-- filterUnit -->
+                  <span class="method-name">filterUnit</span>
+                  <em>
+(TC-DASH-09: Filter Unit lalu Terapkan)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nilaiKartuBerupaAngka">
+                  </a> <!-- nilaiKartuBerupaAngka -->
+                  <span class="method-name">nilaiKartuBerupaAngka</span>
+                  <em>
+(TC-DASH-03: Nilai kartu berupa angka, total karyawan > 0)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pendingTerbukaSetelahLogin">
+                  </a> <!-- pendingTerbukaSetelahLogin -->
+                  <span class="method-name">pendingTerbukaSetelahLogin</span>
+                  <em>
+(TC-DASH-01: Setelah login, halaman Pending terbuka)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="resetPending">
+                  </a> <!-- resetPending -->
+                  <span class="method-name">resetPending</span>
+                  <em>
+(TC-DASH-05: Klik Reset di Pending, halaman tetap normal)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="resetSetelahUbahTanggal">
+                  </a> <!-- resetSetelahUbahTanggal -->
+                  <span class="method-name">resetSetelahUbahTanggal</span>
+                  <em>
+(TC-DASH-07: Reset setelah mengubah tanggal)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchPending">
+                  </a> <!-- searchPending -->
+                  <span class="method-name">searchPending</span>
+                  <em>
+(TC-DASH-04: Klik Search di Pending, halaman tetap normal)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir_Test_Suite-class-passed -->
+          <div class="suite-Hadir_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hadir.tests.SmokeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="halamanLoginAdminTerbuka">
+                  </a> <!-- halamanLoginAdminTerbuka -->
+                  <span class="method-name">halamanLoginAdminTerbuka</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir_Test_Suite-class-passed -->
+          <div class="suite-Hadir_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hadir.tests.DivisiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="editDivisi">
+                  </a> <!-- editDivisi -->
+                  <span class="method-name">editDivisi</span>
+                  <em>
+(TC-DIV-03: Edit nama divisi)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="halamanDivisiTerbuka">
+                  </a> <!-- halamanDivisiTerbuka -->
+                  <span class="method-name">halamanDivisiTerbuka</span>
+                  <em>
+(TC-DIV-01: Halaman Divisi terbuka)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tambahDivisi">
+                  </a> <!-- tambahDivisi -->
+                  <span class="method-name">tambahDivisi</span>
+                  <em>
+(TC-DIV-02: Tambah divisi baru)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir_Test_Suite-class-passed -->
+          <div class="suite-Hadir_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hadir.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginEmailSalah">
+                  </a> <!-- loginEmailSalah -->
+                  <span class="method-name">loginEmailSalah</span>
+                  <em>
+(TC-LOGIN-02: Email tidak terdaftar)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginKosong">
+                  </a> <!-- loginKosong -->
+                  <span class="method-name">loginKosong</span>
+                  <em>
+(TC-LOGIN-04: Email dan password kosong)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginPasswordSalah">
+                  </a> <!-- loginPasswordSalah -->
+                  <span class="method-name">loginPasswordSalah</span>
+                  <em>
+(TC-LOGIN-03: Password salah)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginValid">
+                  </a> <!-- loginValid -->
+                  <span class="method-name">loginValid</span>
+                  <em>
+(TC-LOGIN-01: Login dengan email & password valid)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logoutBerhasil">
+                  </a> <!-- logoutBerhasil -->
+                  <span class="method-name">logoutBerhasil</span>
+                  <em>
+(TC-LOGOUT-01: Logout setelah login berhasil)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir_Test_Suite-class-passed -->
+        </div> <!-- panel Hadir_Test_Suite -->
+        <div panel-name="test-xml-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Bootcamp SQA 30\hadir-testing\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Hadir Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Smoke&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;hadir.tests.SmokeTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Smoke --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login Web Admin&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;hadir.tests.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login Web Admin --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Dashboard Web Admin&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;hadir.tests.DashboardTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Dashboard Web Admin --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Divisi Web Admin&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;hadir.tests.DivisiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Divisi Web Admin --&gt;
+&lt;/suite&gt; &lt;!-- Hadir Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Hadir Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Smoke (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Login Web Admin (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Dashboard Web Admin (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Divisi Web Admin (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Hadir Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Hadir Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Hadir_Test_Suite');
+function tableData_Hadir_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(19);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginKosong')
+data.setCell(0, 2, 'hadir.tests.LoginTest')
+data.setCell(0, 3, 10664);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'editDivisi')
+data.setCell(1, 2, 'hadir.tests.DivisiTest')
+data.setCell(1, 3, 5231);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'tambahDivisi')
+data.setCell(2, 2, 'hadir.tests.DivisiTest')
+data.setCell(2, 3, 4012);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'hapusDivisi')
+data.setCell(3, 2, 'hadir.tests.DivisiTest')
+data.setCell(3, 3, 2610);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'filterUnit')
+data.setCell(4, 2, 'hadir.tests.DashboardTest')
+data.setCell(4, 3, 2334);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'logoutBerhasil')
+data.setCell(5, 2, 'hadir.tests.LoginTest')
+data.setCell(5, 3, 2296);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'halamanDivisiTerbuka')
+data.setCell(6, 2, 'hadir.tests.DivisiTest')
+data.setCell(6, 3, 1834);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'dialogFilterBukaTutup')
+data.setCell(7, 2, 'hadir.tests.DashboardTest')
+data.setCell(7, 3, 1570);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'enamKartuTampil')
+data.setCell(8, 2, 'hadir.tests.DashboardTest')
+data.setCell(8, 3, 1536);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'nilaiKartuBerupaAngka')
+data.setCell(9, 2, 'hadir.tests.DashboardTest')
+data.setCell(9, 3, 1212);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'filterTanggal')
+data.setCell(10, 2, 'hadir.tests.DashboardTest')
+data.setCell(10, 3, 1057);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'loginValid')
+data.setCell(11, 2, 'hadir.tests.LoginTest')
+data.setCell(11, 3, 983);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'loginPasswordSalah')
+data.setCell(12, 2, 'hadir.tests.LoginTest')
+data.setCell(12, 3, 910);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'loginEmailSalah')
+data.setCell(13, 2, 'hadir.tests.LoginTest')
+data.setCell(13, 3, 905);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'halamanLoginAdminTerbuka')
+data.setCell(14, 2, 'hadir.tests.SmokeTest')
+data.setCell(14, 3, 662);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'pendingTerbukaSetelahLogin')
+data.setCell(15, 2, 'hadir.tests.DashboardTest')
+data.setCell(15, 3, 589);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'resetSetelahUbahTanggal')
+data.setCell(16, 2, 'hadir.tests.DashboardTest')
+data.setCell(16, 3, 325);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'searchPending')
+data.setCell(17, 2, 'hadir.tests.DashboardTest')
+data.setCell(17, 3, 190);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'resetPending')
+data.setCell(18, 2, 'hadir.tests.DashboardTest')
+data.setCell(18, 3, 146);
+window.suiteTableData['Hadir_Test_Suite']= { tableData: data, tableDiv: 'times-div-Hadir_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <div id="times-div-Hadir_Test_Suite">
+              </div> <!-- times-div-Hadir_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Hadir Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Hadir_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">hadir.tests.SmokeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">halamanLoginAdminTerbuka</span>
+                <span class="method-start">1669 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=halamanLoginAdminTerbuka status=SUCCESS method=SmokeTest.halamanLoginAdminTerbuka()...)</span>
+                <span class="method-start">2333 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hadir.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2730 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLoginPage</span>
+                <span class="method-start">3634 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginEmailSalah</span>
+                <span class="method-start">4135 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginEmailSalah status=SUCCESS method=LoginTest.loginEmailSalah()[pri:0, instance:h...)</span>
+                <span class="method-start">5041 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">5394 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLoginPage</span>
+                <span class="method-start">6334 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginKosong</span>
+                <span class="method-start">6787 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginKosong status=SUCCESS method=LoginTest.loginKosong()[pri:0, instance:hadir.tes...)</span>
+                <span class="method-start">17453 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">17866 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLoginPage</span>
+                <span class="method-start">18788 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginPasswordSalah</span>
+                <span class="method-start">19318 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginPasswordSalah status=SUCCESS method=LoginTest.loginPasswordSalah()[pri:0, inst...)</span>
+                <span class="method-start">20229 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">20609 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLoginPage</span>
+                <span class="method-start">21497 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginValid</span>
+                <span class="method-start">21971 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginValid status=SUCCESS method=LoginTest.loginValid()[pri:0, instance:hadir.tests...)</span>
+                <span class="method-start">22955 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">23281 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">openLoginPage</span>
+                <span class="method-start">24232 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">logoutBerhasil</span>
+                <span class="method-start">24929 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=logoutBerhasil status=SUCCESS method=LoginTest.logoutBerhasil()[pri:0, instance:had...)</span>
+                <span class="method-start">27225 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hadir.tests.DashboardTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">27558 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">28448 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">dialogFilterBukaTutup</span>
+                <span class="method-start">29847 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=dialogFilterBukaTutup status=SUCCESS method=DashboardTest.dialogFilterBukaTutup()[p...)</span>
+                <span class="method-start">31418 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">31756 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">32627 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">enamKartuTampil</span>
+                <span class="method-start">36479 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=enamKartuTampil status=SUCCESS method=DashboardTest.enamKartuTampil()[pri:0, instan...)</span>
+                <span class="method-start">38015 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">38373 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">39292 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">filterTanggal</span>
+                <span class="method-start">40719 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=filterTanggal status=SUCCESS method=DashboardTest.filterTanggal()[pri:0, instance:h...)</span>
+                <span class="method-start">41776 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">42123 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">42990 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">filterUnit</span>
+                <span class="method-start">44368 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=filterUnit status=SUCCESS method=DashboardTest.filterUnit()[pri:0, instance:hadir.t...)</span>
+                <span class="method-start">46703 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">47044 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">47929 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">nilaiKartuBerupaAngka</span>
+                <span class="method-start">49328 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=nilaiKartuBerupaAngka status=SUCCESS method=DashboardTest.nilaiKartuBerupaAngka()[p...)</span>
+                <span class="method-start">50541 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">50857 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">51837 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">pendingTerbukaSetelahLogin</span>
+                <span class="method-start">53230 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=pendingTerbukaSetelahLogin status=SUCCESS method=DashboardTest.pendingTerbukaSetela...)</span>
+                <span class="method-start">53820 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">54117 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">54984 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">resetPending</span>
+                <span class="method-start">56710 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=resetPending status=SUCCESS method=DashboardTest.resetPending()[pri:0, instance:had...)</span>
+                <span class="method-start">56857 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">57215 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">58079 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">resetSetelahUbahTanggal</span>
+                <span class="method-start">60129 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=resetSetelahUbahTanggal status=SUCCESS method=DashboardTest.resetSetelahUbahTanggal...)</span>
+                <span class="method-start">60455 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">60852 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">61734 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchPending</span>
+                <span class="method-start">63669 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=searchPending status=SUCCESS method=DashboardTest.searchPending()[pri:0, instance:h...)</span>
+                <span class="method-start">63860 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hadir.tests.DivisiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">64195 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">65123 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">editDivisi</span>
+                <span class="method-start">66708 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=editDivisi status=SUCCESS method=DivisiTest.editDivisi()[pri:0, instance:hadir.test...)</span>
+                <span class="method-start">71940 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86840 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">87703 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">halamanDivisiTerbuka</span>
+                <span class="method-start">89093 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=halamanDivisiTerbuka status=SUCCESS method=DivisiTest.halamanDivisiTerbuka()[pri:0,...)</span>
+                <span class="method-start">90928 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">91259 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">92120 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">hapusDivisi</span>
+                <span class="method-start">94035 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=hapusDivisi status=FAILURE method=DivisiTest.hapusDivisi()[pri:0, instance:hadir.te...)</span>
+                <span class="method-start">96649 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">108564 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginDulu</span>
+                <span class="method-start">109486 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tambahDivisi</span>
+                <span class="method-start">110883 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=tambahDivisi status=SUCCESS method=DivisiTest.tambahDivisi()[pri:0, instance:hadir....)</span>
+                <span class="method-start">114896 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

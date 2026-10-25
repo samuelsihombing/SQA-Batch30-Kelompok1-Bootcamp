@@ -1,0 +1,10 @@
+hadir\Pages\DashboardMenuPage.class
+hadir\tests\SmokeTest.class
+hadir\Pages\PendingPage.class
+hadir\tests\LoginTest.class
+hadir\tests\DashboardTest.class
+hadir\Pages\DashboardPage.class
+hadir\Pages\LoginPage.class
+hadir\tests\DivisiTest.class
+hadir\base\BaseTest.class
+hadir\Pages\DivisiPage.class

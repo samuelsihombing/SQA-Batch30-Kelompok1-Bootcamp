@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Hadir Test Suite">
+
+    <test name="Smoke">
+        <classes>
+            <class name="hadir.tests.SmokeTest"/>
+        </classes>
+    </test>
+
+    <test name="Login Web Admin">
+        <classes>
+            <class name="hadir.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Dashboard Web Admin">
+        <classes>
+            <class name="hadir.tests.DashboardTest"/>
+        </classes>
+    </test>
+
+    <test name="Divisi Web Admin">
+        <classes>
+            <class name="hadir.tests.DivisiTest"/>
+        </classes>
+    </test>
+
+</suite>

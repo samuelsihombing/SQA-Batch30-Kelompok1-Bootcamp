@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="19" passed="18" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-25T14:16:01 ICT" name="Hadir Test Suite" finished-at="2026-10-25T14:17:59 ICT" duration-ms="118395">
+    <groups>
+    </groups>
+    <test started-at="2026-10-25T14:16:01 ICT" name="Smoke" finished-at="2026-10-25T14:16:04 ICT" duration-ms="2744">
+      <class name="hadir.tests.SmokeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.SmokeTest@28eaa59a]" started-at="2026-10-25T14:16:01 ICT" name="setUp" finished-at="2026-10-25T14:16:03 ICT" duration-ms="1668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="halamanLoginAdminTerbuka()[pri:0, instance:hadir.tests.SmokeTest@28eaa59a]" started-at="2026-10-25T14:16:03 ICT" name="halamanLoginAdminTerbuka" finished-at="2026-10-25T14:16:03 ICT" duration-ms="662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- halamanLoginAdminTerbuka -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.SmokeTest@28eaa59a]" started-at="2026-10-25T14:16:03 ICT" name="tearDown" finished-at="2026-10-25T14:16:04 ICT" duration-ms="365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=halamanLoginAdminTerbuka status=SUCCESS method=SmokeTest.halamanLoginAdminTerbuka()[pri:0, instance:hadir.tests.SmokeTest@28eaa59a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- hadir.tests.SmokeTest -->
+    </test> <!-- Smoke -->
+    <test started-at="2026-10-25T14:16:04 ICT" name="Login Web Admin" finished-at="2026-10-25T14:16:28 ICT" duration-ms="24825">
+      <class name="hadir.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:04 ICT" name="setUp" finished-at="2026-10-25T14:16:04 ICT" duration-ms="904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:04 ICT" name="openLoginPage" finished-at="2026-10-25T14:16:05 ICT" duration-ms="501" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginEmailSalah()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:05 ICT" name="loginEmailSalah" description="TC-LOGIN-02: Email tidak terdaftar" finished-at="2026-10-25T14:16:06 ICT" duration-ms="905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginEmailSalah -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:06 ICT" name="tearDown" finished-at="2026-10-25T14:16:06 ICT" duration-ms="352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginEmailSalah status=SUCCESS method=LoginTest.loginEmailSalah()[pri:0, instance:hadir.tests.LoginTest@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:06 ICT" name="setUp" finished-at="2026-10-25T14:16:07 ICT" duration-ms="940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:07 ICT" name="openLoginPage" finished-at="2026-10-25T14:16:08 ICT" duration-ms="452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginKosong()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:08 ICT" name="loginKosong" description="TC-LOGIN-04: Email dan password kosong" finished-at="2026-10-25T14:16:18 ICT" duration-ms="10664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginKosong -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:18 ICT" name="tearDown" finished-at="2026-10-25T14:16:19 ICT" duration-ms="412" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginKosong status=SUCCESS method=LoginTest.loginKosong()[pri:0, instance:hadir.tests.LoginTest@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:19 ICT" name="setUp" finished-at="2026-10-25T14:16:20 ICT" duration-ms="922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:20 ICT" name="openLoginPage" finished-at="2026-10-25T14:16:20 ICT" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginPasswordSalah()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:20 ICT" name="loginPasswordSalah" description="TC-LOGIN-03: Password salah" finished-at="2026-10-25T14:16:21 ICT" duration-ms="910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPasswordSalah -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:21 ICT" name="tearDown" finished-at="2026-10-25T14:16:21 ICT" duration-ms="379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginPasswordSalah status=SUCCESS method=LoginTest.loginPasswordSalah()[pri:0, instance:hadir.tests.LoginTest@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:21 ICT" name="setUp" finished-at="2026-10-25T14:16:22 ICT" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:22 ICT" name="openLoginPage" finished-at="2026-10-25T14:16:23 ICT" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginValid()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:23 ICT" name="loginValid" description="TC-LOGIN-01: Login dengan email &amp; password valid" finished-at="2026-10-25T14:16:24 ICT" duration-ms="983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValid -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:24 ICT" name="tearDown" finished-at="2026-10-25T14:16:24 ICT" duration-ms="325" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginValid status=SUCCESS method=LoginTest.loginValid()[pri:0, instance:hadir.tests.LoginTest@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:24 ICT" name="setUp" finished-at="2026-10-25T14:16:25 ICT" duration-ms="951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:25 ICT" name="openLoginPage" finished-at="2026-10-25T14:16:26 ICT" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="logoutBerhasil()[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:26 ICT" name="logoutBerhasil" description="TC-LOGOUT-01: Logout setelah login berhasil" finished-at="2026-10-25T14:16:28 ICT" duration-ms="2296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutBerhasil -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.LoginTest@16d04d3d]" started-at="2026-10-25T14:16:28 ICT" name="tearDown" finished-at="2026-10-25T14:16:28 ICT" duration-ms="327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logoutBerhasil status=SUCCESS method=LoginTest.logoutBerhasil()[pri:0, instance:hadir.tests.LoginTest@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- hadir.tests.LoginTest -->
+    </test> <!-- Login Web Admin -->
+    <test started-at="2026-10-25T14:16:28 ICT" name="Dashboard Web Admin" finished-at="2026-10-25T14:17:05 ICT" duration-ms="36634">
+      <class name="hadir.tests.DashboardTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:28 ICT" name="setUp" finished-at="2026-10-25T14:16:29 ICT" duration-ms="890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:29 ICT" name="loginDulu" finished-at="2026-10-25T14:16:31 ICT" duration-ms="1398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="dialogFilterBukaTutup()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:31 ICT" name="dialogFilterBukaTutup" description="TC-DASH-08: Buka dialog filter lalu Batal" finished-at="2026-10-25T14:16:32 ICT" duration-ms="1570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dialogFilterBukaTutup -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:32 ICT" name="tearDown" finished-at="2026-10-25T14:16:33 ICT" duration-ms="337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dialogFilterBukaTutup status=SUCCESS method=DashboardTest.dialogFilterBukaTutup()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:33 ICT" name="setUp" finished-at="2026-10-25T14:16:33 ICT" duration-ms="871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:33 ICT" name="loginDulu" finished-at="2026-10-25T14:16:37 ICT" duration-ms="3852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="enamKartuTampil()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:37 ICT" name="enamKartuTampil" description="TC-DASH-02: Enam kartu di menu Dashboard tampil" finished-at="2026-10-25T14:16:39 ICT" duration-ms="1536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enamKartuTampil -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:39 ICT" name="tearDown" finished-at="2026-10-25T14:16:39 ICT" duration-ms="357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enamKartuTampil status=SUCCESS method=DashboardTest.enamKartuTampil()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:39 ICT" name="setUp" finished-at="2026-10-25T14:16:40 ICT" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:40 ICT" name="loginDulu" finished-at="2026-10-25T14:16:42 ICT" duration-ms="1426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="filterTanggal()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:42 ICT" name="filterTanggal" description="TC-DASH-06: Isi Start/End Date lalu Search" finished-at="2026-10-25T14:16:43 ICT" duration-ms="1057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterTanggal -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:43 ICT" name="tearDown" finished-at="2026-10-25T14:16:43 ICT" duration-ms="346" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filterTanggal status=SUCCESS method=DashboardTest.filterTanggal()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:43 ICT" name="setUp" finished-at="2026-10-25T14:16:44 ICT" duration-ms="867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:44 ICT" name="loginDulu" finished-at="2026-10-25T14:16:45 ICT" duration-ms="1378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="filterUnit()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:45 ICT" name="filterUnit" description="TC-DASH-09: Filter Unit lalu Terapkan" finished-at="2026-10-25T14:16:48 ICT" duration-ms="2334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterUnit -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:48 ICT" name="tearDown" finished-at="2026-10-25T14:16:48 ICT" duration-ms="339" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filterUnit status=SUCCESS method=DashboardTest.filterUnit()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:48 ICT" name="setUp" finished-at="2026-10-25T14:16:49 ICT" duration-ms="884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:49 ICT" name="loginDulu" finished-at="2026-10-25T14:16:50 ICT" duration-ms="1399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="nilaiKartuBerupaAngka()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:50 ICT" name="nilaiKartuBerupaAngka" description="TC-DASH-03: Nilai kartu berupa angka, total karyawan &gt; 0" finished-at="2026-10-25T14:16:51 ICT" duration-ms="1212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nilaiKartuBerupaAngka -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:51 ICT" name="tearDown" finished-at="2026-10-25T14:16:52 ICT" duration-ms="315" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=nilaiKartuBerupaAngka status=SUCCESS method=DashboardTest.nilaiKartuBerupaAngka()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:52 ICT" name="setUp" finished-at="2026-10-25T14:16:53 ICT" duration-ms="980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:53 ICT" name="loginDulu" finished-at="2026-10-25T14:16:54 ICT" duration-ms="1393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="pendingTerbukaSetelahLogin()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:54 ICT" name="pendingTerbukaSetelahLogin" description="TC-DASH-01: Setelah login, halaman Pending terbuka" finished-at="2026-10-25T14:16:55 ICT" duration-ms="589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingTerbukaSetelahLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:55 ICT" name="tearDown" finished-at="2026-10-25T14:16:55 ICT" duration-ms="296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=pendingTerbukaSetelahLogin status=SUCCESS method=DashboardTest.pendingTerbukaSetelahLogin()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:55 ICT" name="setUp" finished-at="2026-10-25T14:16:56 ICT" duration-ms="867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:56 ICT" name="loginDulu" finished-at="2026-10-25T14:16:58 ICT" duration-ms="1726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="resetPending()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:58 ICT" name="resetPending" description="TC-DASH-05: Klik Reset di Pending, halaman tetap normal" finished-at="2026-10-25T14:16:58 ICT" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPending -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:58 ICT" name="tearDown" finished-at="2026-10-25T14:16:58 ICT" duration-ms="357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=resetPending status=SUCCESS method=DashboardTest.resetPending()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:58 ICT" name="setUp" finished-at="2026-10-25T14:16:59 ICT" duration-ms="863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:16:59 ICT" name="loginDulu" finished-at="2026-10-25T14:17:01 ICT" duration-ms="2050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="resetSetelahUbahTanggal()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:17:01 ICT" name="resetSetelahUbahTanggal" description="TC-DASH-07: Reset setelah mengubah tanggal" finished-at="2026-10-25T14:17:01 ICT" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetSetelahUbahTanggal -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:17:01 ICT" name="tearDown" finished-at="2026-10-25T14:17:02 ICT" duration-ms="396" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=resetSetelahUbahTanggal status=SUCCESS method=DashboardTest.resetSetelahUbahTanggal()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:17:02 ICT" name="setUp" finished-at="2026-10-25T14:17:03 ICT" duration-ms="881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:17:03 ICT" name="loginDulu" finished-at="2026-10-25T14:17:05 ICT" duration-ms="1933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="searchPending()[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:17:05 ICT" name="searchPending" description="TC-DASH-04: Klik Search di Pending, halaman tetap normal" finished-at="2026-10-25T14:17:05 ICT" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPending -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DashboardTest@42a48628]" started-at="2026-10-25T14:17:05 ICT" name="tearDown" finished-at="2026-10-25T14:17:05 ICT" duration-ms="330" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchPending status=SUCCESS method=DashboardTest.searchPending()[pri:0, instance:hadir.tests.DashboardTest@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- hadir.tests.DashboardTest -->
+    </test> <!-- Dashboard Web Admin -->
+    <test started-at="2026-10-25T14:17:05 ICT" name="Divisi Web Admin" finished-at="2026-10-25T14:17:59 ICT" duration-ms="54158">
+      <class name="hadir.tests.DivisiTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:05 ICT" name="setUp" finished-at="2026-10-25T14:17:06 ICT" duration-ms="928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:06 ICT" name="loginDulu" finished-at="2026-10-25T14:17:08 ICT" duration-ms="1584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="editDivisi()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:08 ICT" name="editDivisi" description="TC-DIV-03: Edit nama divisi" finished-at="2026-10-25T14:17:13 ICT" duration-ms="5231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editDivisi -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:13 ICT" name="tearDown" finished-at="2026-10-25T14:17:28 ICT" duration-ms="14899" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=editDivisi status=SUCCESS method=DivisiTest.editDivisi()[pri:0, instance:hadir.tests.DivisiTest@409bf450] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:28 ICT" name="setUp" finished-at="2026-10-25T14:17:29 ICT" duration-ms="863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:29 ICT" name="loginDulu" finished-at="2026-10-25T14:17:30 ICT" duration-ms="1390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="halamanDivisiTerbuka()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:30 ICT" name="halamanDivisiTerbuka" description="TC-DIV-01: Halaman Divisi terbuka" finished-at="2026-10-25T14:17:32 ICT" duration-ms="1834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- halamanDivisiTerbuka -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:32 ICT" name="tearDown" finished-at="2026-10-25T14:17:32 ICT" duration-ms="330" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=halamanDivisiTerbuka status=SUCCESS method=DivisiTest.halamanDivisiTerbuka()[pri:0, instance:hadir.tests.DivisiTest@409bf450] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:32 ICT" name="setUp" finished-at="2026-10-25T14:17:33 ICT" duration-ms="860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:33 ICT" name="loginDulu" finished-at="2026-10-25T14:17:35 ICT" duration-ms="1915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="hapusDivisi()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:35 ICT" name="hapusDivisi" description="TC-DIV-04: Hapus divisi" finished-at="2026-10-25T14:17:37 ICT" duration-ms="2610" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <input aria-invalid="false" id="name" name="name" placeholder="Nama Divisi" required="" type="text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng" value=""> is not clickable at point (768, 465). Other element would receive the click: <div class="MuiDialogActions-root MuiDialogActions-spacing css-1vskg8q">...</div>
+  (Session info: chrome=128.0.6613.86)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7edc64394a46608de7a728c449b509c2, clickElement {id=f.1F451B0C160C680A9517EE1589A9076A.d.B96EC9706D3ABBA53FC13286B3554E0A.e.61}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.86, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53125/devtoo..., se:cdpVersion: 128.0.6613.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7edc64394a46608de7a728c449b509c2)] -> xpath: //div[@role='dialog']//input]
+Session ID: 7edc64394a46608de7a728c449b509c2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input aria-invalid="false" id="name" name="name" placeholder="Nama Divisi" required="" type="text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1o6z5ng" value=""> is not clickable at point (768, 465). Other element would receive the click: <div class="MuiDialogActions-root MuiDialogActions-spacing css-1vskg8q">...</div>
+  (Session info: chrome=128.0.6613.86)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7edc64394a46608de7a728c449b509c2, clickElement {id=f.1F451B0C160C680A9517EE1589A9076A.d.B96EC9706D3ABBA53FC13286B3554E0A.e.61}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.86, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53125/devtoo..., se:cdpVersion: 128.0.6613.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7edc64394a46608de7a728c449b509c2)] -> xpath: //div[@role='dialog']//input]
+Session ID: 7edc64394a46608de7a728c449b509c2
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at hadir.Pages.DivisiPage.tambahDivisi(DivisiPage.java:69)
+at hadir.tests.DivisiTest.hapusDivisi(DivisiTest.java:107)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hapusDivisi -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:38 ICT" name="tearDown" finished-at="2026-10-25T14:17:49 ICT" duration-ms="11915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=hapusDivisi status=FAILURE method=DivisiTest.hapusDivisi()[pri:0, instance:hadir.tests.DivisiTest@409bf450] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:49 ICT" name="setUp" finished-at="2026-10-25T14:17:50 ICT" duration-ms="922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginDulu()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:50 ICT" name="loginDulu" finished-at="2026-10-25T14:17:52 ICT" duration-ms="1397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDulu -->
+        <test-method signature="tambahDivisi()[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:52 ICT" name="tambahDivisi" description="TC-DIV-02: Tambah divisi baru" finished-at="2026-10-25T14:17:56 ICT" duration-ms="4012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tambahDivisi -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:hadir.tests.DivisiTest@409bf450]" started-at="2026-10-25T14:17:56 ICT" name="tearDown" finished-at="2026-10-25T14:17:59 ICT" duration-ms="3456" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tambahDivisi status=SUCCESS method=DivisiTest.tambahDivisi()[pri:0, instance:hadir.tests.DivisiTest@409bf450] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- hadir.tests.DivisiTest -->
+    </test> <!-- Divisi Web Admin -->
+  </suite> <!-- Hadir Test Suite -->
+</testng-results>

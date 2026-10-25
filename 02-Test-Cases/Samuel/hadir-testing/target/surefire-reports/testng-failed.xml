@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Hadir Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Divisi Web Admin(failed)" verbose="0">
+    <classes>
+      <class name="hadir.tests.DivisiTest">
+        <methods>
+          <include name="loginDulu"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="hapusDivisi"/>
+        </methods>
+      </class> <!-- hadir.tests.DivisiTest -->
+    </classes>
+  </test> <!-- Divisi Web Admin(failed) -->
+</suite> <!-- Failed suite [Hadir Test Suite] -->
