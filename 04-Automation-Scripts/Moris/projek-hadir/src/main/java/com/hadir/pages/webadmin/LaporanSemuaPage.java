@@ -1,4 +1,4 @@
-package com.hadir.pages;
+package com.hadir.pages.webadmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,44 +10,42 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaporanCutiPage {
+public class LaporanSemuaPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // Selector filter dan tombol aksi terverifikasi dari DOM aktual
-    private By searchInput = By.id("search");
+    // Locators Komponen Filter Tanggal (berdasarkan DOM date picker Hadir)
     private By startDateInput = By.cssSelector("input[placeholder='Start Date']");
     private By endDateInput = By.cssSelector("input[placeholder='End Date']");
+
+    // Locators Komponen Pencarian & Tombol Aksi terverifikasi dari DOM aktual
+    private By searchInput = By.cssSelector("#search, input[placeholder*='Cari' i]");
     private By searchButton = By.cssSelector("button[type='submit']");
     private By resetButton = By.xpath("//button[normalize-space()='Reset']");
 
-    // Selector tabel data, header, dan pagination terverifikasi dari DOM aktual
-    private By table = By.cssSelector("table[aria-label='sticky table']");
-    private By tableHeaders = By.cssSelector("table[aria-label='sticky table'] thead th");
-    private By tableRows = By.cssSelector("table[aria-label='sticky table'] tbody tr");
+    // Locators Tabel Data & Header (berdasarkan Material-UI Table Hadir)
+    private By table = By.cssSelector("table[aria-label='sticky table'], table.MuiTable-root");
+    private By tableHeaders = By.cssSelector("table[aria-label='sticky table'] thead th, thead th.MuiTableCell-head");
+    private By tableRows = By.cssSelector("table[aria-label='sticky table'] tbody tr, tbody tr.MuiTableRow-root");
+
+    // Locator Kontrol Pagination
     private By pagination = By.cssSelector(".MuiTablePagination-root");
 
-    public LaporanCutiPage(WebDriver driver) {
+    public LaporanSemuaPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    // Memverifikasi halaman /laporan/all berhasil dimuat
     public boolean isPageLoaded() {
         try {
-            return wait.until(ExpectedConditions.urlContains("/laporan/cuti"));
+            return wait.until(ExpectedConditions.urlContains("/laporan/all"));
         } catch (Exception e) {
             return false;
         }
     }
 
-    public boolean isSearchInputDisplayed() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput)).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
+    // Memeriksa keberadaan Input Start Date
     public boolean isStartDateInputDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(startDateInput)).isDisplayed();
@@ -56,6 +54,7 @@ public class LaporanCutiPage {
         }
     }
 
+    // Memeriksa keberadaan Input End Date
     public boolean isEndDateInputDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(endDateInput)).isDisplayed();
@@ -64,6 +63,16 @@ public class LaporanCutiPage {
         }
     }
 
+    // Memeriksa keberadaan Input Pencarian / Nama Karyawan
+    public boolean isSearchInputDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // Memeriksa keberadaan Tombol Search
     public boolean isSearchButtonDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(searchButton)).isDisplayed();
@@ -72,6 +81,7 @@ public class LaporanCutiPage {
         }
     }
 
+    // Memeriksa keberadaan Tombol Reset
     public boolean isResetButtonDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(resetButton)).isDisplayed();
@@ -80,6 +90,7 @@ public class LaporanCutiPage {
         }
     }
 
+    // Memeriksa keberadaan Tabel
     public boolean isTableDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(table)).isDisplayed();
@@ -88,22 +99,17 @@ public class LaporanCutiPage {
         }
     }
 
-    public int getTableHeadersCount() {
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
-            return driver.findElements(tableHeaders).size();
-        } catch (Exception e) {
-            return 0;
-        }
-    }
-
-    public List<String> getAllTableHeadersText() {
+    // Mengambil daftar teks nama kolom header tabel
+    public List<String> getTableHeaders() {
         List<String> headers = new ArrayList<>();
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(table));
             List<WebElement> elements = driver.findElements(tableHeaders);
             for (WebElement el : elements) {
-                headers.add(el.getText().trim());
+                String text = el.getText().trim();
+                if (!text.isEmpty()) {
+                    headers.add(text);
+                }
             }
         } catch (Exception e) {
             // Mengembalikan list kosong jika gagal
@@ -111,10 +117,7 @@ public class LaporanCutiPage {
         return headers;
     }
 
-    public List<String> getTableHeaders() {
-        return getAllTableHeadersText();
-    }
-
+    // Memeriksa keberadaan Kontrol Pagination
     public boolean isPaginationDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(pagination)).isDisplayed();
@@ -123,29 +126,12 @@ public class LaporanCutiPage {
         }
     }
 
-    public String getPaginationText() {
-        try {
-            WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(pagination));
-            return el.getText().trim();
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
+    // Menghitung jumlah baris data tabel tanpa mengasumsikan harus ada data
     public int getTableRowsCount() {
         try {
             return driver.findElements(tableRows).size();
         } catch (Exception e) {
             return 0;
-        }
-    }
-
-    public boolean waitForTableRowsLoaded() {
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
-            return wait.until(driver -> driver.findElements(tableRows).size() > 0);
-        } catch (Exception e) {
-            return false;
         }
     }
 
@@ -170,6 +156,15 @@ public class LaporanCutiPage {
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput));
             String val = element.getAttribute("value");
             return val != null ? val : "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public String getPaginationText() {
+        try {
+            WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(pagination));
+            return el.getText().trim();
         } catch (Exception e) {
             return "";
         }
@@ -203,12 +198,12 @@ public class LaporanCutiPage {
         }
     }
 
-    public boolean waitForDataReloaded() {
+    public boolean waitForDataReloaded(int expectedMinRows) {
         try {
             return wait.until(driver -> {
                 int rowCount = driver.findElements(tableRows).size();
                 String pagText = getPaginationText();
-                return rowCount > 0 && !pagText.contains("0-0 of 0");
+                return rowCount >= expectedMinRows && !pagText.contains("0-0 of 0");
             });
         } catch (Exception e) {
             return false;

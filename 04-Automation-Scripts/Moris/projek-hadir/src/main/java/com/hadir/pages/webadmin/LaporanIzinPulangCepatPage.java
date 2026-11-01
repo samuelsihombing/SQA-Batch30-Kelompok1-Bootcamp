@@ -1,4 +1,4 @@
-package com.hadir.pages;
+package com.hadir.pages.webadmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,17 +10,16 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaporanKehadiranPage {
+public class LaporanIzinPulangCepatPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // Selector filter dan tombol aksi terverifikasi dari DOM aktual
+    // Selector filter dan tombol aksi terverifikasi dari DOM dan bundle aktual
     private By searchInput = By.id("search");
     private By startDateInput = By.cssSelector("input[placeholder='Start Date']");
     private By endDateInput = By.cssSelector("input[placeholder='End Date']");
     private By searchButton = By.cssSelector("button[type='submit']");
     private By resetButton = By.xpath("//button[normalize-space()='Reset']");
-    private By exportButton = By.xpath("//button[normalize-space()='Export']");
 
     // Selector tabel data, header, dan pagination terverifikasi dari DOM aktual
     private By table = By.cssSelector("table[aria-label='sticky table']");
@@ -28,14 +27,14 @@ public class LaporanKehadiranPage {
     private By tableRows = By.cssSelector("table[aria-label='sticky table'] tbody tr");
     private By pagination = By.cssSelector(".MuiTablePagination-root");
 
-    public LaporanKehadiranPage(WebDriver driver) {
+    public LaporanIzinPulangCepatPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public boolean isPageLoaded() {
         try {
-            return wait.until(ExpectedConditions.urlContains("/laporan/activity"));
+            return wait.until(ExpectedConditions.urlContains("/laporan/izin-pulang-cepat"));
         } catch (Exception e) {
             return false;
         }
@@ -76,14 +75,6 @@ public class LaporanKehadiranPage {
     public boolean isResetButtonDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(resetButton)).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public boolean isExportButtonDisplayed() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(exportButton)).isDisplayed();
         } catch (Exception e) {
             return false;
         }

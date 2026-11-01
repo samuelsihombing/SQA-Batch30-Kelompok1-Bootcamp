@@ -1,15 +1,17 @@
-package com.hadir.stepdefinitions;
-
-import com.hadir.drivers.DriverSingleton;
-import com.hadir.pages.LaporanIzinPulangCepatPage;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+package com.hadir.stepdefinitions.webadmin;
 
 import java.util.Arrays;
 import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import com.hadir.drivers.DriverSingleton;
+import com.hadir.pages.webadmin.LaporanIzinPulangCepatPage;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LaporanIzinPulangCepatSteps {
 

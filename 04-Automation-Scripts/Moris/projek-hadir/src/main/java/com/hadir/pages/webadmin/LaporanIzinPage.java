@@ -1,4 +1,4 @@
-package com.hadir.pages;
+package com.hadir.pages.webadmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,11 +10,11 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaporanIzinPulangCepatPage {
+public class LaporanIzinPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // Selector filter dan tombol aksi terverifikasi dari DOM dan bundle aktual
+    // Selector filter dan tombol aksi terverifikasi dari DOM aktual
     private By searchInput = By.id("search");
     private By startDateInput = By.cssSelector("input[placeholder='Start Date']");
     private By endDateInput = By.cssSelector("input[placeholder='End Date']");
@@ -27,14 +27,14 @@ public class LaporanIzinPulangCepatPage {
     private By tableRows = By.cssSelector("table[aria-label='sticky table'] tbody tr");
     private By pagination = By.cssSelector(".MuiTablePagination-root");
 
-    public LaporanIzinPulangCepatPage(WebDriver driver) {
+    public LaporanIzinPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public boolean isPageLoaded() {
         try {
-            return wait.until(ExpectedConditions.urlContains("/laporan/izin-pulang-cepat"));
+            return wait.until(ExpectedConditions.urlContains("/laporan/izin"));
         } catch (Exception e) {
             return false;
         }
@@ -106,7 +106,7 @@ public class LaporanIzinPulangCepatPage {
                 headers.add(el.getText().trim());
             }
         } catch (Exception e) {
-            // Mengembalikan list kosong jika gagal
+            // Mengembalikan list kosong jika gagal membaca header
         }
         return headers;
     }

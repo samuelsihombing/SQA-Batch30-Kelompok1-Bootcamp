@@ -1,4 +1,4 @@
-package com.hadir.pages;
+package com.hadir.pages.webadmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaporanIzinPage {
+public class LaporanKehadiranPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -20,6 +20,7 @@ public class LaporanIzinPage {
     private By endDateInput = By.cssSelector("input[placeholder='End Date']");
     private By searchButton = By.cssSelector("button[type='submit']");
     private By resetButton = By.xpath("//button[normalize-space()='Reset']");
+    private By exportButton = By.xpath("//button[normalize-space()='Export']");
 
     // Selector tabel data, header, dan pagination terverifikasi dari DOM aktual
     private By table = By.cssSelector("table[aria-label='sticky table']");
@@ -27,14 +28,14 @@ public class LaporanIzinPage {
     private By tableRows = By.cssSelector("table[aria-label='sticky table'] tbody tr");
     private By pagination = By.cssSelector(".MuiTablePagination-root");
 
-    public LaporanIzinPage(WebDriver driver) {
+    public LaporanKehadiranPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public boolean isPageLoaded() {
         try {
-            return wait.until(ExpectedConditions.urlContains("/laporan/izin"));
+            return wait.until(ExpectedConditions.urlContains("/laporan/activity"));
         } catch (Exception e) {
             return false;
         }
@@ -80,6 +81,14 @@ public class LaporanIzinPage {
         }
     }
 
+    public boolean isExportButtonDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(exportButton)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public boolean isTableDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(table)).isDisplayed();
@@ -106,7 +115,7 @@ public class LaporanIzinPage {
                 headers.add(el.getText().trim());
             }
         } catch (Exception e) {
-            // Mengembalikan list kosong jika gagal membaca header
+            // Mengembalikan list kosong jika gagal
         }
         return headers;
     }
@@ -165,6 +174,124 @@ public class LaporanIzinPage {
         }
     }
 
+    public void enterStartDate(String date) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(startDateInput));
+        element.sendKeys(org.openqa.selenium.Keys.chord(org.openqa.selenium.Keys.CONTROL, "a"), org.openqa.selenium.Keys.BACK_SPACE);
+        element.sendKeys(date);
+    }
+
+    public void enterEndDate(String date) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(endDateInput));
+        element.sendKeys(org.openqa.selenium.Keys.chord(org.openqa.selenium.Keys.CONTROL, "a"), org.openqa.selenium.Keys.BACK_SPACE);
+        element.sendKeys(date);
+    }
+
+    public String getStartDateInputValue() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(startDateInput));
+            String val = element.getAttribute("value");
+            return val != null ? val : "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public String getEndDateInputValue() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(endDateInput));
+            String val = element.getAttribute("value");
+            return val != null ? val : "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public boolean areAllRowsContainingText(String expectedText) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            List<WebElement> rows = driver.findElements(tableRows);
+            if (rows.isEmpty()) {
+                return false;
+            }
+            for (WebElement row : rows) {
+                if (!row.getText().toLowerCase().contains(expectedText.toLowerCase())) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public List<String> getAllRowsText() {
+        List<String> result = new ArrayList<>();
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            List<WebElement> rows = driver.findElements(tableRows);
+            for (WebElement row : rows) {
+                result.add(row.getText().trim());
+            }
+        } catch (Exception e) {
+            // Mengembalikan list kosong jika terjadi exception
+        }
+        return result;
+    }
+
+    public boolean waitForStartDateInputEmpty() {
+        try {
+            return wait.until(ExpectedConditions.attributeToBe(startDateInput, "value", ""));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForEndDateInputEmpty() {
+        try {
+            return wait.until(ExpectedConditions.attributeToBe(endDateInput, "value", ""));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForSearchResultsLoaded(String expectedKeyword) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            return wait.until(driver -> {
+                List<WebElement> rows = driver.findElements(tableRows);
+                if (rows.isEmpty()) {
+                    return false;
+                }
+                for (WebElement row : rows) {
+                    if (!row.getText().toLowerCase().contains(expectedKeyword.toLowerCase())) {
+                        return false;
+                    }
+                }
+                return true;
+            });
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForTableRowsLoaded() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            return wait.until(driver -> driver.findElements(tableRows).size() > 0);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getPaginationText() {
+        try {
+            WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(pagination));
+            return el.getText().trim();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
     public boolean waitForSearchInputEmpty() {
         try {
             return wait.until(ExpectedConditions.attributeToBe(searchInput, "value", ""));
@@ -172,4 +299,19 @@ public class LaporanIzinPage {
             return false;
         }
     }
+
+    public boolean waitForEmptySearchResult() {
+        try {
+            return wait.until(driver -> {
+                int rowCount = driver.findElements(tableRows).size();
+                String pagText = getPaginationText();
+                return rowCount == 0 && pagText.contains("0-0 of 0");
+            });
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
+
+
+

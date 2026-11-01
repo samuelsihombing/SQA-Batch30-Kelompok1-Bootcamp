@@ -1,7 +1,8 @@
 target/
+*.class
 .idea/
-.vscode/
 *.iml
-.env
-.env.*
-!.env.example
+.vscode/
+
+# Sensitif Credential Configuration
+src/test/resources/config.properties

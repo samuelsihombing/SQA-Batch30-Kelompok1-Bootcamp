@@ -1,8 +1,8 @@
-package com.hadir.stepdefinitions;
+package com.hadir.stepdefinitions.webadmin;
 
 import com.hadir.drivers.DriverSingleton;
-import com.hadir.pages.LaporanSemuaPage;
-import com.hadir.pages.LoginPage;
+import com.hadir.pages.webadmin.LaporanSemuaPage;
+import com.hadir.pages.webadmin.LoginPage;
 import com.hadir.utils.TestCredentials;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -18,6 +18,8 @@ public class LaporanSemuaSteps {
     private WebDriver driver;
     private LoginPage loginPage;
     private LaporanSemuaPage laporanSemuaPage;
+    private int initialRowsCount = 0;
+    private String initialPaginationText = "";
 
     @Given("Pengguna membuka browser")
     public void penggunaMembukaBrowser() {
@@ -125,5 +127,62 @@ public class LaporanSemuaSteps {
         System.out.println("- Input Cari/Nama Karyawan tampil: " + searchInput);
         System.out.println("- Tombol Search tampil: " + searchBtn);
         System.out.println("- Tombol Reset tampil: " + resetBtn);
+    }
+
+    @When("Pengguna memasukkan nama {string} ke kolom pencarian laporan semua dan klik Search")
+    public void penggunaMemasukkanNamaKeKolomPencarianLaporanSemuaDanKlikSearch(String nama) {
+        if (laporanSemuaPage == null) {
+            laporanSemuaPage = new LaporanSemuaPage(driver);
+        }
+        initialRowsCount = laporanSemuaPage.getTableRowsCount();
+        initialPaginationText = laporanSemuaPage.getPaginationText();
+        System.out.println("Kondisi tabel awal sebelum pencarian - Baris: " + initialRowsCount + ", Pagination: " + initialPaginationText.replace("\n", " | "));
+
+        laporanSemuaPage.enterSearchName(nama);
+        String enteredVal = laporanSemuaPage.getSearchInputValue();
+        Assert.assertEquals(enteredVal, nama, "Verifikasi Gagal: Nilai input pencarian tidak sesuai yang diketik.");
+        System.out.println("Memasukkan nama pencarian: " + nama);
+
+        laporanSemuaPage.clickSearchButton();
+        System.out.println("Tombol Search diklik.");
+    }
+
+    @Then("Halaman Laporan Semua menampilkan hasil pencarian kosong")
+    public void halamanLaporanSemuaMenampilkanHasilPencarianKosong() {
+        boolean isEmpty = laporanSemuaPage.waitForEmptySearchResult();
+        int rows = laporanSemuaPage.getTableRowsCount();
+        String pagText = laporanSemuaPage.getPaginationText();
+        System.out.println("Hasil pencarian fiktif - Baris data: " + rows + ", Pagination: " + pagText.replace("\n", " | "));
+
+        Assert.assertTrue(isEmpty || (rows == 0 && pagText.contains("0-0 of 0")),
+                "Verifikasi Gagal: Hasil pencarian untuk data fiktif tidak kosong. Baris: " + rows + ", Pagination: " + pagText);
+
+        // Verifikasi integritas URL tetap pada /laporan/all
+        String currentUrl = driver.getCurrentUrl();
+        Assert.assertTrue(currentUrl.contains("/laporan/all"),
+                "Verifikasi Gagal: URL berpindah setelah pencarian. URL Aktual: " + currentUrl);
+    }
+
+    @When("Pengguna mengklik tombol Reset pada filter Laporan Semua")
+    public void penggunaMengklikTombolResetPadaFilterLaporanSemua() {
+        laporanSemuaPage.clickResetButton();
+        System.out.println("Tombol Reset diklik.");
+    }
+
+    @Then("Kolom input pencarian nama laporan semua menjadi kosong dan data tabel kembali termuat")
+    public void kolomInputPencarianNamaLaporanSemuaMenjadiKosongDanDataTabelKembaliTermuat() {
+        boolean isInputEmpty = laporanSemuaPage.waitForSearchInputEmpty();
+        String currentVal = laporanSemuaPage.getSearchInputValue();
+        System.out.println("Nilai input pencarian setelah reset: '" + currentVal + "'");
+        Assert.assertTrue(isInputEmpty || currentVal.isEmpty(),
+                "Verifikasi Gagal: Kolom input pencarian tidak kosong setelah Reset. Nilai: " + currentVal);
+
+        boolean isReloaded = laporanSemuaPage.waitForDataReloaded(initialRowsCount > 0 ? initialRowsCount : 1);
+        int rowsAfterReset = laporanSemuaPage.getTableRowsCount();
+        String pagTextAfterReset = laporanSemuaPage.getPaginationText();
+        System.out.println("Kondisi tabel setelah Reset - Baris: " + rowsAfterReset + ", Pagination: " + pagTextAfterReset.replace("\n", " | "));
+
+        Assert.assertTrue(isReloaded || rowsAfterReset >= initialRowsCount || rowsAfterReset > 0,
+                "Verifikasi Gagal: Data tabel laporan semua tidak kembali termuat ke kondisi awal setelah Reset.");
     }
 }

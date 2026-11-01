@@ -1,4 +1,4 @@
-package com.hadir.pages;
+package com.hadir.pages.webadmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -3,7 +3,7 @@ package com.hadir.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hadir.pages.LoginPage;
+import com.hadir.pages.webadmin.LoginPage;
 import com.hadir.utils.TestCredentials;
 
 public class LoginTest extends BaseTest {

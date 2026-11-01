@@ -1,7 +1,7 @@
-package com.hadir.stepdefinitions;
+package com.hadir.stepdefinitions.webadmin;
 
 import com.hadir.drivers.DriverSingleton;
-import com.hadir.pages.LaporanIzinPage;
+import com.hadir.pages.webadmin.LaporanIzinPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

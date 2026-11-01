@@ -1,0 +1,331 @@
+package com.hadir.pages.webadmin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LaporanCutiPage {
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    // Selector filter dan tombol aksi terverifikasi dari DOM aktual
+    private By searchInput = By.id("search");
+    private By startDateInput = By.cssSelector("input[placeholder='Start Date']");
+    private By endDateInput = By.cssSelector("input[placeholder='End Date']");
+    private By searchButton = By.cssSelector("button[type='submit']");
+    private By resetButton = By.xpath("//button[normalize-space()='Reset']");
+
+    // Selector tabel data, header, dan pagination terverifikasi dari DOM aktual
+    private By table = By.cssSelector("table[aria-label='sticky table']");
+    private By tableHeaders = By.cssSelector("table[aria-label='sticky table'] thead th");
+    private By tableRows = By.cssSelector("table[aria-label='sticky table'] tbody tr");
+    private By pagination = By.cssSelector(".MuiTablePagination-root");
+
+    public LaporanCutiPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public boolean isPageLoaded() {
+        try {
+            return wait.until(ExpectedConditions.urlContains("/laporan/cuti"));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isSearchInputDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isStartDateInputDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(startDateInput)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isEndDateInputDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(endDateInput)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isSearchButtonDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(searchButton)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isResetButtonDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(resetButton)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isTableDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(table)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public int getTableHeadersCount() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            return driver.findElements(tableHeaders).size();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public List<String> getAllTableHeadersText() {
+        List<String> headers = new ArrayList<>();
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            List<WebElement> elements = driver.findElements(tableHeaders);
+            for (WebElement el : elements) {
+                headers.add(el.getText().trim());
+            }
+        } catch (Exception e) {
+            // Mengembalikan list kosong jika gagal
+        }
+        return headers;
+    }
+
+    public List<String> getTableHeaders() {
+        return getAllTableHeadersText();
+    }
+
+    public boolean isPaginationDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(pagination)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getPaginationText() {
+        try {
+            WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(pagination));
+            return el.getText().trim();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public int getTableRowsCount() {
+        try {
+            return driver.findElements(tableRows).size();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public boolean waitForTableRowsLoaded() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            return wait.until(driver -> driver.findElements(tableRows).size() > 0);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void enterSearchName(String name) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput));
+        element.clear();
+        element.sendKeys(name);
+    }
+
+    public void clickSearchButton() {
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+        button.click();
+    }
+
+    public void clickResetButton() {
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(resetButton));
+        button.click();
+    }
+
+    public String getSearchInputValue() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput));
+            String val = element.getAttribute("value");
+            return val != null ? val : "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public boolean waitForTableOrPageStable() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(table)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForEmptySearchResult() {
+        try {
+            return wait.until(driver -> {
+                int rowCount = driver.findElements(tableRows).size();
+                String pagText = getPaginationText();
+                return rowCount == 0 && pagText.contains("0-0 of 0");
+            });
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForSearchInputEmpty() {
+        try {
+            return wait.until(ExpectedConditions.attributeToBe(searchInput, "value", ""));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForDataReloaded() {
+        try {
+            return wait.until(driver -> {
+                int rowCount = driver.findElements(tableRows).size();
+                String pagText = getPaginationText();
+                return rowCount > 0 && !pagText.contains("0-0 of 0");
+            });
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void enterStartDate(String date) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(startDateInput));
+        element.sendKeys(org.openqa.selenium.Keys.chord(org.openqa.selenium.Keys.CONTROL, "a"), org.openqa.selenium.Keys.BACK_SPACE);
+        element.sendKeys(date);
+    }
+
+    public void enterEndDate(String date) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(endDateInput));
+        element.sendKeys(org.openqa.selenium.Keys.chord(org.openqa.selenium.Keys.CONTROL, "a"), org.openqa.selenium.Keys.BACK_SPACE);
+        element.sendKeys(date);
+    }
+
+    public String getStartDateInputValue() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(startDateInput));
+            String val = element.getAttribute("value");
+            return val != null ? val : "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public String getEndDateInputValue() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(endDateInput));
+            String val = element.getAttribute("value");
+            return val != null ? val : "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public boolean areAllRowsContainingText(String expectedText) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            List<WebElement> rows = driver.findElements(tableRows);
+            if (rows.isEmpty()) {
+                return false;
+            }
+            for (WebElement row : rows) {
+                if (!row.getText().toLowerCase().contains(expectedText.toLowerCase())) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public List<String> getAllRowsText() {
+        List<String> result = new ArrayList<>();
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            List<WebElement> rows = driver.findElements(tableRows);
+            for (WebElement row : rows) {
+                result.add(row.getText().trim());
+            }
+        } catch (Exception e) {
+            // Mengembalikan list kosong jika terjadi exception
+        }
+        return result;
+    }
+
+    public boolean waitForStartDateInputEmpty() {
+        try {
+            return wait.until(ExpectedConditions.attributeToBe(startDateInput, "value", ""));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForEndDateInputEmpty() {
+        try {
+            return wait.until(ExpectedConditions.attributeToBe(endDateInput, "value", ""));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForSearchResultsLoaded(String expectedKeyword) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(table));
+            return wait.until(driver -> {
+                List<WebElement> rows = driver.findElements(tableRows);
+                if (rows.isEmpty()) {
+                    return false;
+                }
+                for (WebElement row : rows) {
+                    if (!row.getText().toLowerCase().contains(expectedKeyword.toLowerCase())) {
+                        return false;
+                    }
+                }
+                return true;
+            });
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void selectDateRangeViaCalendar(int startDayIndex, int endDayIndex) {
+        WebElement calBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Start Date']/following-sibling::div//button")));
+        calBtn.click();
+        WebElement datePicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".rdrDateRangeWrapper, .date__picker")));
+        List<WebElement> days = datePicker.findElements(By.cssSelector(".rdrDay:not(.rdrDayPassive)"));
+        if (days.size() > Math.max(startDayIndex, endDayIndex)) {
+            days.get(startDayIndex).click();
+            days.get(endDayIndex).click();
+        }
+    }
+}
+
+
+

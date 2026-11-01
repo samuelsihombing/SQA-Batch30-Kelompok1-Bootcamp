@@ -16,3 +16,15 @@ Feature: Modul Laporan Semua Web Admin
     Then Halaman Laporan Semua berhasil dimuat
     And Tabel laporan dan kontrol pagination ditampilkan
     And Komponen filter tanggal mulai dan tanggal akhir ditampilkan
+
+  @LaporanSemua @Functional
+  Scenario: Pengujian interaksi pencarian nama karyawan yang tidak ditemukan dan reset filter laporan semua
+    Given Pengguna membuka browser
+    And Pengguna login menggunakan kredensial akun testing yang valid
+    When Pengguna membuka halaman Laporan Semua di URL "/laporan/all"
+    Then Halaman Laporan Semua berhasil dimuat
+    When Pengguna memasukkan nama "KaryawanFiktifXYZ999" ke kolom pencarian laporan semua dan klik Search
+    Then Halaman Laporan Semua menampilkan hasil pencarian kosong
+    When Pengguna mengklik tombol Reset pada filter Laporan Semua
+    Then Kolom input pencarian nama laporan semua menjadi kosong dan data tabel kembali termuat
+
